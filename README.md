@@ -1,4 +1,4 @@
-== Synopsis
+## Synopsis
 
 FrontEnd Challenge Laboratório Hacker
 
