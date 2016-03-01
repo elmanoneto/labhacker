@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html ng-app="LabHacker">
+  <head>
+    <meta charset="utf-8">
+    <title>Laboratório Hacker Challenge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="src/assets/css/main.css" title="Main CSS" charset="utf-8">
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-css-only/css/bootstrap.css">
+  </head>
+  <body ng-controller="ProjectsController">
+    <nav class="desktop navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#"><img src="src/assets/images/logo.png" alt=""></a>
+        </div>
+        <div class="content">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Pesquisar..." ng-model="query['title']">
+          </div>
+          <div class="menu">
+            <ul>
+              <li><img src="src/assets/images/login.png" alt="">| <a href="#">Login ou cadastro</a></li>
+              <li><img src="src/assets/images/sobre.png" alt="">| <a href="#">Sobre o Wikilegis</a></li>
+              <li><img src="src/assets/images/idioma.png" alt="">| <a href="#">Selecione um idioma</a></li>
+              <li class="padding"><img src="src/assets/images/avatar.png" alt=""></li>
+            </ul>
+            <img src="" alt="">
+          </div>
+        </div>
+      </div>
+    </nav>
+    <nav class="mobile navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <img src="src/assets/images/logo.png" alt="">
+        <input type="text" class="form-control" placeholder="Pesquisar..." ng-model="query['title']">
+        <br>
+        <ul>
+          <li>| <a href="#">Login ou cadastro</a></li>
+          <li>| <a href="#">Sobre o Wikilegis</a></li>
+          <li>| <a href="#">Selecione um idioma</a></li>
+          <li class="padding"><img src="src/assets/images/avatar.png" alt=""></li>
+        </ul>
+      </div>
+    </nav>
+    <section class="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="title">
+              <hr>
+              <h1>PROJETOS DE LEI</h1>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="menu">
+              <ul>
+                <li class="border" data-ng-click="sortCategory('news')" ng-class="{'active' : isActive('news')}">Mais novos</li>
+                <li class="border" data-ng-click="sortCategory('proposals')" ng-class="{'active' : isActive('proposals')}">Mais propostas</li>
+                <li data-ng-click="sortCategory('comments')" ng-class="{'active' : isActive('comments')}">Menos propostas</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="rows">
+          <div class="box" ng-repeat="project in projects | orderBy: order() | filter:query">
+            <div class="left">
+              <div class="img">
+                <img src="src/assets/images/icone.png" alt="">
+              </div>
+              <div class="text">
+                <h4>{{project.title}}</h4>
+                <p>{{project.description}}</p>
+                <br>
+                <p class="status">&nbsp;Status da PL:
+                  <span class="green">{{project.status}}</span></p>
+                <p class="date pull-right">Data: <span class="green" ng-bind="project.date | date: 'dd/MM/yyyy'"></span></p>
+              </div>
+            </div>
+            <div class="right">
+              <p class="number">{{project.proposals}}</p>
+              <p>propostas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="node_modules/angular/angular.js"></script>
+  <script src="src/main.js"></script>
+  <script src="src/controllers/projects_controller.js"></script>
+  <script src="src/services/projects_service.js"></script>
+</html>

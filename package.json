@@ -1,0 +1,29 @@
+{
+  "name": "labhacker",
+  "version": "0.0.1",
+  "description": "Laboratório Hacker Challenge",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elmanoneto/labhacker.git"
+  },
+  "author": "Elmano Neto <elmanoneto@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elmanoneto/labhacker/issues"
+  },
+  "homepage": "https://github.com/elmanoneto/labhacker#readme",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.2.0"
+  },
+  "dependencies": {
+    "angular": "^1.5.0",
+    "bootstrap-css-only": "^3.3.6",
+    "normalize.css": "^3.0.3"
+  }
+}

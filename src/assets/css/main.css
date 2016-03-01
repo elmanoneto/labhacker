@@ -1,0 +1,168 @@
+body {
+  background-image: url("../images/background.jpg"); }
+
+.navbar-default {
+  background-color: #3B4747 !important;
+  border: none !important; }
+  .navbar-default .navbar-nav {
+    margin-top: 17px !important; }
+  .navbar-default .content {
+    margin-top: 25px !important;
+    text-align: center !important; }
+    .navbar-default .content .input-group input {
+      border-radius: 10px;
+      left: 18px;
+      width: 243px;
+      background-image: url("../images/glass.png");
+      background-repeat: no-repeat;
+      background-position: 10px 10px;
+      text-indent: 20px; }
+    .navbar-default .content .menu {
+      bottom: 32px;
+      position: relative;
+      left: 294px; }
+      .navbar-default .content .menu ul {
+        list-style-type: none; }
+        .navbar-default .content .menu ul li {
+          display: inline;
+          color: white;
+          font-weight: bold;
+          font-size: 8pt; }
+          .navbar-default .content .menu ul li a {
+            color: white !important; }
+          .navbar-default .content .menu ul li a:hover {
+            text-decoration: underline; }
+        .navbar-default .content .menu ul .padding {
+          position: relative;
+          left: 20px; }
+
+.navbar {
+  min-height: 80px !important; }
+
+section.main {
+  top: 100px;
+  position: relative;
+  margin-top: 0;
+  padding: 50px 0px; }
+  section.main h1 {
+    color: #3B4747;
+    font-weight: bold;
+    display: table-cell;
+    text-indent: 10px; }
+  section.main hr {
+    display: block;
+    border: 0;
+    border-top: 8px solid #7AD07E;
+    margin: 0.5em 0;
+    padding: 0;
+    width: 266px;
+    position: relative; }
+  section.main .menu {
+    text-align: right !important;
+    position: relative;
+    top: 41px; }
+    section.main .menu ul {
+      list-style-type: none; }
+      section.main .menu ul li {
+        display: inline;
+        padding: 0px 10px;
+        font-weight: bold;
+        color: gray;
+        cursor: pointer; }
+      section.main .menu ul .active {
+        color: black; }
+      section.main .menu ul .border {
+        border-right: 3px solid #7AD07E; }
+  section.main .box {
+    display: inline-block;
+    margin-top: 10px; }
+  section.main .left {
+    float: left;
+    width: 1010px;
+    position: relative;
+    background-color: white;
+    padding: 20px 20px; }
+    section.main .left .img {
+      float: left; }
+    section.main .left .text {
+      float: left;
+      text-indent: 20px;
+      width: 80%;
+      position: relative;
+      line-height: 15px;
+      bottom: 6px; }
+      section.main .left .text p {
+        display: inline;
+        text-indent: 20px;
+        right: 10px;
+        position: relative;
+        left: 21px;
+        top: 5px; }
+      section.main .left .text p.status, section.main .left .text p.date {
+        top: 20px;
+        font-size: 10pt;
+        font-weight: bold; }
+      section.main .left .text p.status {
+        border-left: 3px solid #7AD07E; }
+      section.main .left .text .green {
+        color: #7AD07E; }
+      section.main .left .text h4 {
+        font-weight: bold;
+        margin: 0;
+        padding: 0; }
+  section.main .right {
+    float: left;
+    position: relative;
+    width: 120px;
+    background-color: white;
+    left: 10px;
+    text-align: center;
+    line-height: 10px;
+    padding: 37px 0px;
+    font-weight: bold; }
+    section.main .right .number {
+      color: #7AD07E;
+      font-size: 18pt; }
+  section.main .rows {
+    width: 100%; }
+
+.mobile {
+  display: none; }
+
+@media (min-width: 420px) and (max-width: 1024px) {
+  .desktop {
+    display: none; }
+  .mobile {
+    display: block;
+    text-align: center;
+    padding: 20px 0; }
+    .mobile input {
+      background-image: url("../images/glass.png");
+      background-repeat: no-repeat;
+      background-position: 10px 10px;
+      text-indent: 20px; }
+    .mobile ul {
+      list-style-type: none; }
+      .mobile ul li {
+        display: inline;
+        color: white;
+        font-weight: bold;
+        font-size: 8pt; }
+        .mobile ul li a {
+          color: white !important; }
+        .mobile ul li a:hover {
+          text-decoration: underline; }
+      .mobile ul .padding {
+        position: relative;
+        left: 20px; }
+  section.main {
+    padding: 120px 0; }
+    section.main .menu {
+      text-align: center !important;
+      top: 10px; }
+    section.main .left {
+      width: 80%; }
+    section.main .right {
+      width: 20%; }
+    section.main .box {
+      display: flex; } }

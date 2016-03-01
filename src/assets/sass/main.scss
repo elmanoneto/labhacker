@@ -1,0 +1,253 @@
+$green: #7AD07E;
+
+body {
+  background-image: url('../images/background.jpg');
+}
+
+.navbar-default {
+  background-color: #3B4747 !important;
+  border: none !important;
+
+
+  .navbar-nav {
+    margin-top: 17px !important;
+  }
+
+  .content {
+    margin-top: 25px !important;
+    text-align: center !important;
+
+    .input-group {
+      input {
+        border-radius: 10px;
+        left: 18px;
+        width: 243px;
+        background-image: url('../images/glass.png');
+        background-repeat: no-repeat;
+        background-position: 10px 10px;
+        text-indent: 20px;
+      }
+    }
+    .menu {
+      bottom: 32px;
+      position: relative;
+      left: 294px;
+
+      ul {
+        list-style-type: none;
+
+        li {
+          display: inline;
+          color: white;
+          font-weight: bold;
+          font-size: 8pt;
+
+          a {
+            color: white !important;
+          }
+
+          a:hover {
+            text-decoration: underline;
+          }
+        }
+
+        .padding {
+          position: relative;
+          left: 20px;
+        }
+      }
+    }
+  }
+}
+
+.navbar{
+  min-height:80px !important;
+}
+
+section.main {
+  top: 100px;
+  position: relative;
+  margin-top: 0;
+  padding: 50px 0px;
+
+  h1 {
+    color: #3B4747;
+    font-weight: bold;
+    display:table-cell;
+    text-indent: 10px;
+  }
+
+  hr {
+    display: block;
+    border: 0;
+    border-top: 8px solid $green;
+    margin: 0.5em 0;
+    padding: 0;
+    width: 266px;
+    position: relative;
+  }
+
+  .menu {
+    text-align: right !important;
+    position: relative;
+    top: 41px;
+
+    ul {
+      list-style-type: none;
+
+      li {
+        display: inline;
+        padding: 0px 10px;
+        font-weight: bold;
+        color: gray;
+        cursor: pointer;
+      }
+      .active {
+        color: black;
+      }
+      .border {
+        border-right: 3px solid #7AD07E;
+      }
+    }
+  }
+
+  .box {
+    display: inline-block;
+    margin-top: 10px;
+
+  }
+
+  .left {
+    float: left;
+    width: 1010px;
+    position: relative;
+    background-color: white;
+    padding: 20px 20px;
+
+    .img {
+      float: left;
+    }
+
+    .text {
+      float: left;
+      text-indent: 20px;
+      width: 80%;
+      position: relative;
+      line-height: 15px;
+      bottom: 6px;
+
+      p {
+        display: inline;
+        text-indent: 20px;
+        right: 10px;
+        position: relative;
+        left: 21px;
+        top: 5px;
+      }
+
+      p.status, p.date{
+        top: 20px;
+        font-size: 10pt;
+        font-weight: bold;
+      }
+
+      p.status {
+        border-left: 3px solid $green;
+      }
+
+      .green {
+        color: $green;
+      }
+
+      h4 {
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  .right {
+    float: left;
+    position: relative;
+    width: 120px;
+    background-color: white;
+    left: 10px;
+    text-align: center;
+    line-height: 10px;
+    padding: 37px 0px;
+    font-weight: bold;
+
+    .number {
+      color: $green;
+      font-size: 18pt;
+    }
+  }
+
+  .rows {
+    width: 100%;
+  }
+
+}
+
+.mobile {
+  display: none;
+}
+
+@media (min-width: 420px) and (max-width: 1024px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+    input {
+      background-image: url('../images/glass.png');
+      background-repeat: no-repeat;
+      background-position: 10px 10px;
+      text-indent: 20px;
+    }
+    ul {
+      list-style-type: none;
+
+      li {
+        display: inline;
+        color: white;
+        font-weight: bold;
+        font-size: 8pt;
+
+        a {
+          color: white !important;
+        }
+
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .padding {
+        position: relative;
+        left: 20px;
+      }
+    }
+  }
+  section.main {
+    padding: 120px 0;
+
+    .menu {
+      text-align: center !important;
+      top: 10px;
+    }
+    .left {
+      width: 80%;
+    }
+
+    .right {
+      width: 20%;
+    }
+    .box {
+      display: flex;
+    }
+  }
+}
